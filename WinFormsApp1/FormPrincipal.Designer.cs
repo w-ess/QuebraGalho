@@ -30,12 +30,13 @@
         {
             tabControl1 = new TabControl();
             tabPage1 = new TabPage();
+            textDiretorio = new TextBox();
             label1 = new Label();
             button1 = new Button();
             textBase64 = new RichTextBox();
             tabPage2 = new TabPage();
-            textFormatacao = new RichTextBox();
             button2 = new Button();
+            textFormatacao = new RichTextBox();
             tabControl1.SuspendLayout();
             tabPage1.SuspendLayout();
             tabPage2.SuspendLayout();
@@ -53,6 +54,7 @@
             // 
             // tabPage1
             // 
+            tabPage1.Controls.Add(textDiretorio);
             tabPage1.Controls.Add(label1);
             tabPage1.Controls.Add(button1);
             tabPage1.Controls.Add(textBase64);
@@ -64,10 +66,18 @@
             tabPage1.Text = "Conversor";
             tabPage1.UseVisualStyleBackColor = true;
             // 
+            // textDiretorio
+            // 
+            textDiretorio.Location = new Point(15, 28);
+            textDiretorio.Name = "textDiretorio";
+            textDiretorio.Size = new Size(283, 23);
+            textDiretorio.TabIndex = 4;
+            textDiretorio.Text = "c:\\Temp\\arquivo.pdf";
+            // 
             // label1
             // 
             label1.AutoSize = true;
-            label1.Location = new Point(15, 61);
+            label1.Location = new Point(15, 105);
             label1.Name = "label1";
             label1.Size = new Size(46, 15);
             label1.TabIndex = 3;
@@ -75,7 +85,7 @@
             // 
             // button1
             // 
-            button1.Location = new Point(15, 24);
+            button1.Location = new Point(15, 69);
             button1.Name = "button1";
             button1.Size = new Size(131, 23);
             button1.TabIndex = 2;
@@ -85,7 +95,7 @@
             // 
             // textBase64
             // 
-            textBase64.Location = new Point(15, 79);
+            textBase64.Location = new Point(15, 134);
             textBase64.Name = "textBase64";
             textBase64.Size = new Size(756, 229);
             textBase64.TabIndex = 1;
@@ -103,14 +113,6 @@
             tabPage2.Text = "Formatação";
             tabPage2.UseVisualStyleBackColor = true;
             // 
-            // textFormatacao
-            // 
-            textFormatacao.Location = new Point(6, 52);
-            textFormatacao.Name = "textFormatacao";
-            textFormatacao.Size = new Size(780, 350);
-            textFormatacao.TabIndex = 0;
-            textFormatacao.Text = "";
-            // 
             // button2
             // 
             button2.Location = new Point(12, 19);
@@ -120,6 +122,14 @@
             button2.Text = "Formatar Json";
             button2.UseVisualStyleBackColor = true;
             button2.Click += button2_Click;
+            // 
+            // textFormatacao
+            // 
+            textFormatacao.Location = new Point(6, 52);
+            textFormatacao.Name = "textFormatacao";
+            textFormatacao.Size = new Size(780, 350);
+            textFormatacao.TabIndex = 0;
+            textFormatacao.Text = "";
             // 
             // FormPrincipal
             // 
@@ -146,5 +156,6 @@
         private RichTextBox textBase64;
         private Button button2;
         private RichTextBox textFormatacao;
+        private TextBox textDiretorio;
     }
 }

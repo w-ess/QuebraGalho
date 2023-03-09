@@ -17,13 +17,13 @@ namespace WinFormsApp1
 
         private void button1_Click(object sender, EventArgs e)
         {
-            File.WriteAllBytes(@"c:\Temp\arquivo.pdf", Convert.FromBase64String(textBase64.Text));
+            File.WriteAllBytes(textDiretorio.Text, Convert.FromBase64String(textBase64.Text));
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
             var objeto = JsonSerializer.Deserialize<Object>(textFormatacao.Text);
-            textFormatacao.Text = JsonSerializer.Serialize(objeto, new JsonSerializerOptions { WriteIndented = true });            
+            textFormatacao.Text = JsonSerializer.Serialize(objeto, new JsonSerializerOptions { WriteIndented = true });
         }
     }
 }
